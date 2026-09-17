@@ -1,0 +1,702 @@
+[
+  {
+    "id": 1,
+    "file": "shade-001-42ec5d.png",
+    "hex": "#42EC5D",
+    "width": 548,
+    "height": 590
+  },
+  {
+    "id": 2,
+    "file": "shade-002-9ef0c2.png",
+    "hex": "#9EF0C2",
+    "width": 550,
+    "height": 482
+  },
+  {
+    "id": 3,
+    "file": "shade-003-853d3b.png",
+    "hex": "#853D3B",
+    "width": 550,
+    "height": 780
+  },
+  {
+    "id": 4,
+    "file": "shade-004-79041f.png",
+    "hex": "#79041F",
+    "width": 550,
+    "height": 482
+  },
+  {
+    "id": 5,
+    "file": "shade-005-025ac1.png",
+    "hex": "#025AC1",
+    "width": 550,
+    "height": 780
+  },
+  {
+    "id": 6,
+    "file": "shade-006-493607.png",
+    "hex": "#493607",
+    "width": 550,
+    "height": 590
+  },
+  {
+    "id": 7,
+    "file": "shade-007-bef9bc.png",
+    "hex": "#BEF9BC",
+    "width": 550,
+    "height": 590
+  },
+  {
+    "id": 8,
+    "file": "shade-008-a816c0.png",
+    "hex": "#A816C0",
+    "width": 550,
+    "height": 590
+  },
+  {
+    "id": 9,
+    "file": "shade-009-6aeced.png",
+    "hex": "#6AECED",
+    "width": 550,
+    "height": 482
+  },
+  {
+    "id": 10,
+    "file": "shade-010-6d7d78.png",
+    "hex": "#6D7D78",
+    "width": 550,
+    "height": 450
+  },
+  {
+    "id": 11,
+    "file": "shade-011-f65348.png",
+    "hex": "#F65348",
+    "width": 550,
+    "height": 590
+  },
+  {
+    "id": 12,
+    "file": "shade-012-caf118.png",
+    "hex": "#CAF118",
+    "width": 550,
+    "height": 780
+  },
+  {
+    "id": 13,
+    "file": "shade-013-0ab4b9.png",
+    "hex": "#0AB4B9",
+    "width": 550,
+    "height": 752
+  },
+  {
+    "id": 14,
+    "file": "shade-014-bf518a.png",
+    "hex": "#BF518A",
+    "width": 546,
+    "height": 842
+  },
+  {
+    "id": 15,
+    "file": "shade-015-1573fd.png",
+    "hex": "#1573FD",
+    "width": 548,
+    "height": 590
+  },
+  {
+    "id": 16,
+    "file": "shade-016-4d4018.png",
+    "hex": "#4D4018",
+    "width": 550,
+    "height": 482
+  },
+  {
+    "id": 17,
+    "file": "shade-017-3f2fd4.png",
+    "hex": "#3F2FD4",
+    "width": 550,
+    "height": 780
+  },
+  {
+    "id": 18,
+    "file": "shade-018-950e38.png",
+    "hex": "#950E38",
+    "width": 550,
+    "height": 482
+  },
+  {
+    "id": 19,
+    "file": "shade-019-0ca636.png",
+    "hex": "#0CA636",
+    "width": 550,
+    "height": 780
+  },
+  {
+    "id": 20,
+    "file": "shade-020-fdd40b.png",
+    "hex": "#FDD40B",
+    "width": 550,
+    "height": 590
+  },
+  {
+    "id": 21,
+    "file": "shade-021-00a5a0.png",
+    "hex": "#00A5A0",
+    "width": 550,
+    "height": 590
+  },
+  {
+    "id": 22,
+    "file": "shade-022-fd1d40.png",
+    "hex": "#FD1D40",
+    "width": 550,
+    "height": 590
+  },
+  {
+    "id": 23,
+    "file": "shade-023-5326a2.png",
+    "hex": "#5326A2",
+    "width": 550,
+    "height": 482
+  },
+  {
+    "id": 24,
+    "file": "shade-024-b01424.png",
+    "hex": "#B01424",
+    "width": 550,
+    "height": 450
+  },
+  {
+    "id": 25,
+    "file": "shade-025-82289c.png",
+    "hex": "#82289C",
+    "width": 550,
+    "height": 590
+  },
+  {
+    "id": 26,
+    "file": "shade-026-70942b.png",
+    "hex": "#70942B",
+    "width": 550,
+    "height": 780
+  },
+  {
+    "id": 27,
+    "file": "shade-027-6750ff.png",
+    "hex": "#6750FF",
+    "width": 550,
+    "height": 752
+  },
+  {
+    "id": 28,
+    "file": "shade-028-d48456.png",
+    "hex": "#D48456",
+    "width": 546,
+    "height": 842
+  },
+  {
+    "id": 29,
+    "file": "shade-029-ef1033.png",
+    "hex": "#EF1033",
+    "width": 548,
+    "height": 590
+  },
+  {
+    "id": 30,
+    "file": "shade-030-668e37.png",
+    "hex": "#668E37",
+    "width": 550,
+    "height": 482
+  },
+  {
+    "id": 31,
+    "file": "shade-031-158392.png",
+    "hex": "#158392",
+    "width": 550,
+    "height": 780
+  },
+  {
+    "id": 32,
+    "file": "shade-032-c4147e.png",
+    "hex": "#C4147E",
+    "width": 550,
+    "height": 482
+  },
+  {
+    "id": 33,
+    "file": "shade-033-7bcb95.png",
+    "hex": "#7BCB95",
+    "width": 550,
+    "height": 780
+  },
+  {
+    "id": 34,
+    "file": "shade-034-6e1e49.png",
+    "hex": "#6E1E49",
+    "width": 550,
+    "height": 590
+  },
+  {
+    "id": 35,
+    "file": "shade-035-a10e38.png",
+    "hex": "#A10E38",
+    "width": 550,
+    "height": 590
+  },
+  {
+    "id": 36,
+    "file": "shade-036-9cdef9.png",
+    "hex": "#9CDEF9",
+    "width": 550,
+    "height": 590
+  },
+  {
+    "id": 37,
+    "file": "shade-037-37603f.png",
+    "hex": "#37603F",
+    "width": 550,
+    "height": 482
+  },
+  {
+    "id": 38,
+    "file": "shade-038-fc5d85.png",
+    "hex": "#FC5D85",
+    "width": 550,
+    "height": 450
+  },
+  {
+    "id": 39,
+    "file": "shade-039-1396c3.png",
+    "hex": "#1396C3",
+    "width": 550,
+    "height": 590
+  },
+  {
+    "id": 40,
+    "file": "shade-040-3472ff.png",
+    "hex": "#3472FF",
+    "width": 550,
+    "height": 780
+  },
+  {
+    "id": 41,
+    "file": "shade-041-1f36d0.png",
+    "hex": "#1F36D0",
+    "width": 550,
+    "height": 752
+  },
+  {
+    "id": 42,
+    "file": "shade-042-8edd1e.png",
+    "hex": "#8EDD1E",
+    "width": 546,
+    "height": 842
+  },
+  {
+    "id": 43,
+    "file": "shade-043-0f7564.png",
+    "hex": "#0F7564",
+    "width": 548,
+    "height": 590
+  },
+  {
+    "id": 44,
+    "file": "shade-044-8b5f60.png",
+    "hex": "#8B5F60",
+    "width": 550,
+    "height": 482
+  },
+  {
+    "id": 45,
+    "file": "shade-045-326d21.png",
+    "hex": "#326D21",
+    "width": 550,
+    "height": 780
+  },
+  {
+    "id": 46,
+    "file": "shade-046-681216.png",
+    "hex": "#681216",
+    "width": 550,
+    "height": 482
+  },
+  {
+    "id": 47,
+    "file": "shade-047-e1fcfb.png",
+    "hex": "#E1FCFB",
+    "width": 550,
+    "height": 780
+  },
+  {
+    "id": 48,
+    "file": "shade-048-f1921b.png",
+    "hex": "#F1921B",
+    "width": 550,
+    "height": 590
+  },
+  {
+    "id": 49,
+    "file": "shade-049-432dcf.png",
+    "hex": "#432DCF",
+    "width": 550,
+    "height": 590
+  },
+  {
+    "id": 50,
+    "file": "shade-050-8efc32.png",
+    "hex": "#8EFC32",
+    "width": 550,
+    "height": 590
+  },
+  {
+    "id": 51,
+    "file": "shade-051-02be5d.png",
+    "hex": "#02BE5D",
+    "width": 550,
+    "height": 482
+  },
+  {
+    "id": 52,
+    "file": "shade-052-9a2fa5.png",
+    "hex": "#9A2FA5",
+    "width": 550,
+    "height": 450
+  },
+  {
+    "id": 53,
+    "file": "shade-053-fa425b.png",
+    "hex": "#FA425B",
+    "width": 550,
+    "height": 590
+  },
+  {
+    "id": 54,
+    "file": "shade-054-382fb9.png",
+    "hex": "#382FB9",
+    "width": 550,
+    "height": 780
+  },
+  {
+    "id": 55,
+    "file": "shade-055-289732.png",
+    "hex": "#289732",
+    "width": 550,
+    "height": 752
+  },
+  {
+    "id": 56,
+    "file": "shade-056-519ec0.png",
+    "hex": "#519EC0",
+    "width": 546,
+    "height": 842
+  },
+  {
+    "id": 57,
+    "file": "shade-057-c342cf.png",
+    "hex": "#C342CF",
+    "width": 548,
+    "height": 590
+  },
+  {
+    "id": 58,
+    "file": "shade-058-171496.png",
+    "hex": "#171496",
+    "width": 550,
+    "height": 482
+  },
+  {
+    "id": 59,
+    "file": "shade-059-3fd8c1.png",
+    "hex": "#3FD8C1",
+    "width": 550,
+    "height": 780
+  },
+  {
+    "id": 60,
+    "file": "shade-060-22c039.png",
+    "hex": "#22C039",
+    "width": 550,
+    "height": 482
+  },
+  {
+    "id": 61,
+    "file": "shade-061-5b5441.png",
+    "hex": "#5B5441",
+    "width": 550,
+    "height": 780
+  },
+  {
+    "id": 62,
+    "file": "shade-062-6dc86f.png",
+    "hex": "#6DC86F",
+    "width": 550,
+    "height": 590
+  },
+  {
+    "id": 63,
+    "file": "shade-063-33ff4e.png",
+    "hex": "#33FF4E",
+    "width": 550,
+    "height": 590
+  },
+  {
+    "id": 64,
+    "file": "shade-064-c0456d.png",
+    "hex": "#C0456D",
+    "width": 550,
+    "height": 590
+  },
+  {
+    "id": 65,
+    "file": "shade-065-e72797.png",
+    "hex": "#E72797",
+    "width": 550,
+    "height": 482
+  },
+  {
+    "id": 66,
+    "file": "shade-066-138499.png",
+    "hex": "#138499",
+    "width": 550,
+    "height": 450
+  },
+  {
+    "id": 67,
+    "file": "shade-067-1a9075.png",
+    "hex": "#1A9075",
+    "width": 550,
+    "height": 590
+  },
+  {
+    "id": 68,
+    "file": "shade-068-fc4009.png",
+    "hex": "#FC4009",
+    "width": 550,
+    "height": 780
+  },
+  {
+    "id": 69,
+    "file": "shade-069-c8c814.png",
+    "hex": "#C8C814",
+    "width": 550,
+    "height": 752
+  },
+  {
+    "id": 70,
+    "file": "shade-070-e32360.png",
+    "hex": "#E32360",
+    "width": 546,
+    "height": 842
+  },
+  {
+    "id": 71,
+    "file": "shade-071-48439b.png",
+    "hex": "#48439B",
+    "width": 548,
+    "height": 590
+  },
+  {
+    "id": 72,
+    "file": "shade-072-c7b1aa.png",
+    "hex": "#C7B1AA",
+    "width": 550,
+    "height": 482
+  },
+  {
+    "id": 73,
+    "file": "shade-073-8d7518.png",
+    "hex": "#8D7518",
+    "width": 550,
+    "height": 780
+  },
+  {
+    "id": 74,
+    "file": "shade-074-4558da.png",
+    "hex": "#4558DA",
+    "width": 550,
+    "height": 482
+  },
+  {
+    "id": 75,
+    "file": "shade-075-efe38d.png",
+    "hex": "#EFE38D",
+    "width": 550,
+    "height": 780
+  },
+  {
+    "id": 76,
+    "file": "shade-076-eea4a7.png",
+    "hex": "#EEA4A7",
+    "width": 550,
+    "height": 590
+  },
+  {
+    "id": 77,
+    "file": "shade-077-4a0551.png",
+    "hex": "#4A0551",
+    "width": 550,
+    "height": 590
+  },
+  {
+    "id": 78,
+    "file": "shade-078-c3bf06.png",
+    "hex": "#C3BF06",
+    "width": 550,
+    "height": 590
+  },
+  {
+    "id": 79,
+    "file": "shade-079-933a69.png",
+    "hex": "#933A69",
+    "width": 550,
+    "height": 482
+  },
+  {
+    "id": 80,
+    "file": "shade-080-499e9f.png",
+    "hex": "#499E9F",
+    "width": 550,
+    "height": 450
+  },
+  {
+    "id": 81,
+    "file": "shade-081-b9198e.png",
+    "hex": "#B9198E",
+    "width": 550,
+    "height": 590
+  },
+  {
+    "id": 82,
+    "file": "shade-082-a67ca6.png",
+    "hex": "#A67CA6",
+    "width": 550,
+    "height": 780
+  },
+  {
+    "id": 83,
+    "file": "shade-083-0e22fa.png",
+    "hex": "#0E22FA",
+    "width": 550,
+    "height": 752
+  },
+  {
+    "id": 84,
+    "file": "shade-084-074a91.png",
+    "hex": "#074A91",
+    "width": 546,
+    "height": 842
+  },
+  {
+    "id": 85,
+    "file": "shade-085-9d914a.png",
+    "hex": "#9D914A",
+    "width": 548,
+    "height": 590
+  },
+  {
+    "id": 86,
+    "file": "shade-086-7f5676.png",
+    "hex": "#7F5676",
+    "width": 550,
+    "height": 482
+  },
+  {
+    "id": 87,
+    "file": "shade-087-8e8633.png",
+    "hex": "#8E8633",
+    "width": 550,
+    "height": 780
+  },
+  {
+    "id": 88,
+    "file": "shade-088-802565.png",
+    "hex": "#802565",
+    "width": 550,
+    "height": 482
+  },
+  {
+    "id": 89,
+    "file": "shade-089-9d189c.png",
+    "hex": "#9D189C",
+    "width": 550,
+    "height": 780
+  },
+  {
+    "id": 90,
+    "file": "shade-090-29d853.png",
+    "hex": "#29D853",
+    "width": 550,
+    "height": 590
+  },
+  {
+    "id": 91,
+    "file": "shade-091-3423d9.png",
+    "hex": "#3423D9",
+    "width": 550,
+    "height": 590
+  },
+  {
+    "id": 92,
+    "file": "shade-092-da4388.png",
+    "hex": "#DA4388",
+    "width": 550,
+    "height": 590
+  },
+  {
+    "id": 93,
+    "file": "shade-093-1cc56d.png",
+    "hex": "#1CC56D",
+    "width": 550,
+    "height": 482
+  },
+  {
+    "id": 94,
+    "file": "shade-094-87ed24.png",
+    "hex": "#87ED24",
+    "width": 550,
+    "height": 450
+  },
+  {
+    "id": 95,
+    "file": "shade-095-5af855.png",
+    "hex": "#5AF855",
+    "width": 550,
+    "height": 590
+  },
+  {
+    "id": 96,
+    "file": "shade-096-88bbb0.png",
+    "hex": "#88BBB0",
+    "width": 550,
+    "height": 780
+  },
+  {
+    "id": 97,
+    "file": "shade-097-a15824.png",
+    "hex": "#A15824",
+    "width": 550,
+    "height": 752
+  },
+  {
+    "id": 98,
+    "file": "shade-098-e03980.png",
+    "hex": "#E03980",
+    "width": 546,
+    "height": 842
+  },
+  {
+    "id": 99,
+    "file": "shade-099-942119.png",
+    "hex": "#942119",
+    "width": 548,
+    "height": 590
+  },
+  {
+    "id": 100,
+    "file": "shade-100-48b6a2.png",
+    "hex": "#48B6A2",
+    "width": 550,
+    "height": 482
+  }
+]
