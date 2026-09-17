@@ -2,6 +2,8 @@
 
     "use strict";
 
+    $('html').addClass('progressive-gallery');
+
     var BATCH_SIZE = 12,
         INITIAL_COUNT = 12,
         $grid,
@@ -32,6 +34,22 @@
         return $link.append($image);
     }
 
+    function revealItems($items) {
+        $items.each(function(index) {
+            this.style.setProperty('--reveal-delay', (index % BATCH_SIZE) * 35 + 'ms');
+        });
+
+        return $items.imagesLoaded().progress(function(_, image) {
+            var $item = $(image.img).closest('.item');
+
+            window.requestAnimationFrame(function() {
+                window.requestAnimationFrame(function() {
+                    $item.addClass('is-visible');
+                });
+            });
+        });
+    }
+
     function finishGallery() {
         if (observer) {
             observer.disconnect();
@@ -59,7 +77,7 @@
         nextIndex += batch.length;
         $grid.append($items).masonry('appended', $items);
 
-        $items.imagesLoaded().always(function() {
+        revealItems($items).always(function() {
             $grid.masonry('layout');
             isLoading = false;
             if (nextIndex >= manifest.length) {
@@ -86,6 +104,8 @@
         $sentinel = $('#gallery-sentinel');
         $status = $('#gallery-status');
         $end = $('#gallery-end');
+
+        revealItems($grid.find('.item'));
 
         $.getJSON('images/hex/manifest.json')
             .done(function(data) {
