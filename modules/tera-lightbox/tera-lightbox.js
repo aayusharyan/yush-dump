@@ -28,18 +28,26 @@ Made by Themanoid
       return (url.match(p)) ? RegExp.$1 : false;
     }
 
-    $('.lightbox').each(function(){ // For each lightbox link
-        var href = $(this).attr('href');
-        var caption = $(this).attr('data-caption');
-        $gallery.push(href); // Push the img url to the gallery array
-        $galleryCaption.push(caption);
-        $(this).attr('data-index', $galleryIndex);
-        $galleryIndex++; // Next index
-        $(this).on('click', function(e){
-            e.stopImmediatePropagation();
-            loadLightbox($(this).attr('data-index'),href,caption);
-            e.preventDefault();
+    function refreshGallery(){
+        $gallery = [];
+        $galleryCaption = [];
+        $galleryIndex = 0;
+        $('.lightbox').each(function(){
+            $gallery.push($(this).attr('href'));
+            $galleryCaption.push($(this).attr('data-caption'));
+            $(this).attr('data-index', $galleryIndex);
+            $galleryIndex++;
         });
+    }
+
+    refreshGallery();
+
+    $('body').on('click', '.lightbox', function(e){
+        refreshGallery();
+        var $item = $(this);
+        e.stopImmediatePropagation();
+        loadLightbox($item.attr('data-index'), $item.attr('href'), $item.attr('data-caption'));
+        e.preventDefault();
     });
 
     $('body').on('click', '.galleryClose', function(e) {

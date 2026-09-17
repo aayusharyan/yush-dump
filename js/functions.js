@@ -104,6 +104,7 @@
     // Masonry grid
     var $grid = $('.img-grid');
     $grid.masonry({
+      itemSelector: '.item',
       columnWidth: '.item-sizer',
       percentPosition: true
     });
