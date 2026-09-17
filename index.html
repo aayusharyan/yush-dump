@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Yush Dump — an unfiltered image archive.">
+    <meta name="theme-color" content="#0a0a0a">
+    <title>Yush Dump — Image Archive</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='3' fill='%230a0a0a'/%3E%3Cpath d='M7 7h6l3 7 3-7h6l-6 12v6h-6v-6z' fill='%23d8ff00'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="styles.css">
+    <script src="photos.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#gallery">Skip to photographs</a>
+
+    <div class="site-shell">
+      <aside class="sidebar" aria-label="Site navigation">
+        <a class="brand" href="#top" aria-label="Yush Dump, home">
+          <span class="brand-mark" aria-hidden="true">Y/</span>
+          <span class="brand-name">Yush Dump</span>
+          <span class="brand-note">Image archive</span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span>Menu</span>
+          <span class="menu-toggle-icon" aria-hidden="true"></span>
+        </button>
+
+        <div class="sidebar-lower" id="site-nav">
+          <p class="archive-note">Photographs, scraps,<br>and everything between.</p>
+          <nav class="main-nav" aria-label="Primary">
+            <a href="#gallery" data-nav-link>Index <span>01</span></a>
+            <a href="#about" data-nav-link>About <span>02</span></a>
+          </nav>
+          <div class="sidebar-meta">
+            <span id="photo-count">000 images</span>
+            <span>Updated as it happens</span>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main" id="top">
+        <header class="index-header">
+          <p>Visual index</p>
+          <p><span aria-hidden="true">●</span> Ongoing</p>
+        </header>
+
+        <section class="gallery" id="gallery" aria-label="Image archive"></section>
+        <noscript>
+          <p class="noscript">This image index needs JavaScript enabled.</p>
+        </noscript>
+
+        <section class="about" id="about" aria-labelledby="about-title">
+          <p class="section-label">02 / About</p>
+          <div class="about-copy">
+            <h1 id="about-title">A place for the frames that deserve daylight.</h1>
+            <p>Yush Dump is a living, loosely edited archive. No categories, no chronology—just images as they arrive.</p>
+          </div>
+          <p class="about-signoff">Made by Yush.</p>
+        </section>
+      </main>
+    </div>
+
+    <dialog class="lightbox" id="lightbox" aria-labelledby="lightbox-title">
+      <div class="lightbox-frame">
+        <button class="lightbox-close" type="button" aria-label="Close image viewer">Close</button>
+        <button class="lightbox-arrow lightbox-previous" type="button" aria-label="Previous image">←</button>
+        <figure>
+          <img id="lightbox-image" alt="">
+          <figcaption>
+            <span id="lightbox-title"></span>
+            <span id="lightbox-meta"></span>
+          </figcaption>
+        </figure>
+        <button class="lightbox-arrow lightbox-next" type="button" aria-label="Next image">→</button>
+      </div>
+    </dialog>
+  </body>
+</html>
