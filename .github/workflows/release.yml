@@ -1,0 +1,137 @@
+# Manually create a semantic release and publish its multi-platform image to GHCR.
+name: Create Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version_bump:
+        description: Version bump type
+        required: true
+        type: choice
+        options:
+          - minor
+          - major
+        default: minor
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+env:
+  IMAGE: ghcr.io/${{ github.repository }}
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+
+    steps:
+      - name: Check out complete history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Calculate release version
+        id: version
+        shell: bash
+        run: |
+          latest_tag=$(git tag --list "v*.*.*" --sort=-version:refname | awk 'NR==1')
+          latest_tag=${latest_tag:-v0.0.0}
+          IFS=. read -r major minor _ <<< "${latest_tag#v}"
+
+          case "${{ inputs.version_bump }}" in
+            major) major=$((major + 1)); minor=0 ;;
+            minor) minor=$((minor + 1)) ;;
+          esac
+
+          echo "tag=v${major}.${minor}.0" >> "$GITHUB_OUTPUT"
+          echo "version=${major}.${minor}.0" >> "$GITHUB_OUTPUT"
+          echo "major=${major}" >> "$GITHUB_OUTPUT"
+          echo "minor=${major}.${minor}" >> "$GITHUB_OUTPUT"
+          echo "previous_tag=${latest_tag}" >> "$GITHUB_OUTPUT"
+
+      # Keep the version in source so local builds and registry builds from the
+      # tagged commit expose the same image metadata.
+      - name: Update Dockerfile version labels
+        env:
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          sed -i -E "s/version=\"[0-9]+\.[0-9]+\.[0-9]+\"/version=\"${VERSION}\"/g" Dockerfile
+
+          label_count=$(grep --count "version=\"${VERSION}\"" Dockerfile)
+          if [ "$label_count" -ne 2 ]; then
+            echo "Expected 2 version labels at ${VERSION}, found ${label_count}" >&2
+            exit 1
+          fi
+
+          git config user.name "Aayush Sinha"
+          git config user.email "hello@yush.dev"
+          git add Dockerfile
+          if git diff --cached --quiet; then
+            echo "Dockerfile is already at ${VERSION}"
+          else
+            git commit --message "Bump version to ${VERSION}"
+          fi
+
+      - name: Set up emulation
+        uses: docker/setup-qemu-action@v3
+
+      - name: Set up Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Sign in to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate image metadata
+        id: metadata
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.IMAGE }}
+          tags: |
+            type=raw,value=latest
+            type=raw,value=${{ steps.version.outputs.tag }}
+            type=raw,value=v${{ steps.version.outputs.minor }}
+            type=raw,value=v${{ steps.version.outputs.major }}
+          # metadata-action otherwise derives this label from the first tag,
+          # which would incorrectly record the image version as "latest".
+          labels: |
+            org.opencontainers.image.version=${{ steps.version.outputs.version }}
+
+      - name: Build and publish image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: Dockerfile
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ${{ steps.metadata.outputs.tags }}
+          labels: ${{ steps.metadata.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      # Do not publish the commit or release tag until its images exist.
+      - name: Push version bump, tag, and GitHub release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ steps.version.outputs.tag }}
+          PREVIOUS_TAG: ${{ steps.version.outputs.previous_tag }}
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          git config user.name "Aayush Sinha"
+          git config user.email "hello@yush.dev"
+          git push origin "HEAD:refs/heads/${BRANCH}"
+          git tag --annotate "$TAG" --message "Release $TAG"
+          git push origin "$TAG"
+
+          if git rev-parse "$PREVIOUS_TAG" >/dev/null 2>&1; then
+            gh release create "$TAG" --title "$TAG" --generate-notes \
+              --notes-start-tag "$PREVIOUS_TAG"
+          else
+            gh release create "$TAG" --title "$TAG" --generate-notes
+          fi
