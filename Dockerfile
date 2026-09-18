@@ -1,5 +1,13 @@
 FROM nginx:1.29-alpine
 
+# The release workflow updates both labels before building and commits the
+# result, keeping image metadata and the release tag at the same version.
+LABEL org.opencontainers.image.title="yush-dump" \
+      org.opencontainers.image.description="Static image archive served by nginx" \
+      org.opencontainers.image.source="https://github.com/aayusharyan/yush-dump" \
+      org.opencontainers.image.version="0.0.0" \
+      version="0.0.0"
+
 COPY . /usr/share/nginx/html
 
 EXPOSE 80
